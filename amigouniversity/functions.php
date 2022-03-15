@@ -11,4 +11,9 @@ function css_js(){
 add_action('wp_enqueue_scripts','css_js');
 
 add_theme_support( 'title-tag' );
+
+function reg_nav(){
+    register_nav_menu('header_nav_menu', 'Header Nav Menu');
+}
+add_action('after_setup_theme', 'reg_nav');
 ?>
