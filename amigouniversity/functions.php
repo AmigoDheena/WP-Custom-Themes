@@ -14,6 +14,8 @@ add_theme_support( 'title-tag' );
 
 function reg_nav(){
     register_nav_menu('header_nav_menu', 'Header Nav Menu');
+    register_nav_menu('footer_nav_one', 'Footer Nav One');
+    register_nav_menu('footer_nav_two', 'Footer Nav Two');
 }
 add_action('after_setup_theme', 'reg_nav');
 ?>
