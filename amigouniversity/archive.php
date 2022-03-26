@@ -3,9 +3,9 @@
   <div class="page-banner">
       <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('images/ocean.jpg') ?>)"></div>
       <div class="page-banner__content container container--narrow">
-      <h1 class="page-banner__title">Blog</h1>
+      <h1 class="page-banner__title"><?php the_archive_title(); ?></h1>
       <div class="page-banner__intro">
-          <p>New Blog Post</p>
+          <p><?php the_archive_description(); ?></p>
       </div>
       </div>
   </div>
@@ -23,11 +23,7 @@
           <p><a class="btn btn--blue" href="<?php the_permalink(); ?>">Continue Reading >></a></p>
         </div>
       </div>
-      
-    
-    <?php } 
-       echo paginate_links();
-    ?>
+    <?php } echo paginate_links(); ?>
   </div>
 
 <?php get_footer(); ?>
